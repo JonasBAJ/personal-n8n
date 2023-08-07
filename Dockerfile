@@ -19,5 +19,4 @@ ENV N8N_ENCRYPTION_KEY=$ENCRYPTION_KEY
 
 RUN npm i card-validator
 
-RUN npm i -g card-validator
 CMD ["n8n start"]
