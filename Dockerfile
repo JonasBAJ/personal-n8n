@@ -17,4 +17,5 @@ ARG ENCRYPTION_KEY
 
 ENV N8N_ENCRYPTION_KEY=$ENCRYPTION_KEY
 
+CMD ["npm i -g lodash"]
 CMD ["n8n start"]
