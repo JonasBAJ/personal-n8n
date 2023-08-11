@@ -21,6 +21,7 @@ ENV N8N_ENCRYPTION_KEY=$ENCRYPTION_KEY
 RUN npm uninstall -g card-validator chromium
 RUN npm i -g playwright
 RUN playwright install
+RUN playwright install-deps
 
 
 CMD ["n8n start"]
