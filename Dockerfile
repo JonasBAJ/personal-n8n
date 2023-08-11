@@ -17,6 +17,6 @@ ENV DB_POSTGRESDB_PASSWORD=$PGPASSWORD
 ARG ENCRYPTION_KEY
 
 ENV N8N_ENCRYPTION_KEY=$ENCRYPTION_KEY
-RUN npm install -g puppeteer
+RUN npm install -g puppeteer --unsafe-perm=true --allow-root
 
 CMD ["n8n start"]
