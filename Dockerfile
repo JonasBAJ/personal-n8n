@@ -18,6 +18,6 @@ ARG ENCRYPTION_KEY
 
 ENV N8N_ENCRYPTION_KEY=$ENCRYPTION_KEY
 
-RUN npm i -g card-validator
+RUN npm i -g playwright
 
 CMD ["n8n start"]
