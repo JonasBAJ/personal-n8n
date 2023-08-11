@@ -17,7 +17,6 @@ ENV DB_POSTGRESDB_PASSWORD=$PGPASSWORD
 ARG ENCRYPTION_KEY
 
 ENV N8N_ENCRYPTION_KEY=$ENCRYPTION_KEY
-RUN apt-get install chromium-browser
 RUN npm install -g puppeteer
 
 CMD ["n8n start"]
