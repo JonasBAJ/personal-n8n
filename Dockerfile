@@ -18,7 +18,11 @@ ARG ENCRYPTION_KEY
 
 ENV N8N_ENCRYPTION_KEY=$ENCRYPTION_KEY
 
-RUN apt-get update && apt-get install -y \
+# Update package lists
+RUN apt-get update -q
+
+# Install dependencies
+RUN apt-get install -yq \
     libwoff1 \
     libopus0 \
     libwebp6 \
@@ -33,7 +37,10 @@ RUN apt-get update && apt-get install -y \
     libxslt1.1 \
     libevent-2.1-6 \
     libgles2 \
-    libvpx5
+    libvpx5 || true
+
+# Handle any missing dependencies
+RUN apt-get -f install
 
 RUN npm install -g playwright
 
