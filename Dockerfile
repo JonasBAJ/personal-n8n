@@ -18,6 +18,6 @@ ARG ENCRYPTION_KEY
 
 ENV N8N_ENCRYPTION_KEY=$ENCRYPTION_KEY
 
-RUN npm i -g playwright
+RUN npx playwright install --with-deps chromium
 
 CMD ["n8n start"]
