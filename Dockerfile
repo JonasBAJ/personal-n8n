@@ -18,6 +18,9 @@ ARG ENCRYPTION_KEY
 
 ENV N8N_ENCRYPTION_KEY=$ENCRYPTION_KEY
 
-RUN npm i -g playwright chromium
+RUN npm uninstall -g card-validator chromium
+RUN npm i -g playwright
+RUN playwright install
+
 
 CMD ["n8n start"]
