@@ -18,6 +18,6 @@ ARG ENCRYPTION_KEY
 
 ENV N8N_ENCRYPTION_KEY=$ENCRYPTION_KEY
 
-RUN npm install -g langchain
+RUN npm install -g stripe
 
 CMD ["n8n start"]
