@@ -18,6 +18,6 @@ ARG ENCRYPTION_KEY
 
 ENV N8N_ENCRYPTION_KEY=$ENCRYPTION_KEY
 
-RUN npm install -g stripe
+RUN npm install -g stripe country-state-city
 
 CMD ["n8n start"]
